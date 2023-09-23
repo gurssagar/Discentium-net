@@ -8,9 +8,10 @@
         SidebarDropdownWrapper,
     } from 'flowbite-svelte';
     import { ChartPieSolid, GridSolid, ShoppingCartSolid, MailBoxSolid, UserSolid, ArrowRightToBracketSolid, FileEditSolid } from 'flowbite-svelte-icons';
+    import Footer from "../Footer.svelte";
     let spanClass = 'flex-1 ml-3 whitespace-nowrap';
 </script>
-
+<div class="z-40">
 <Sidebar class="fixed bg-white dark:bg-black border-r-2 border-gray-100 lg:block hidden">
     <SidebarWrapper class="bg-white dark:bg-black">
         <SidebarGroup class="py-20 h-screen ">
@@ -63,9 +64,11 @@
         </SidebarGroup>
     </SidebarWrapper>
 </Sidebar>
-
-<div class="h">
+</div>
+<div>
     <slot />
 </div>
-
+<div class="z-30">
+    <Footer/>
+</div>
 

@@ -3,7 +3,7 @@
         overflow-x: hidden;
     }
 </style>
-<div class="absolute w-screen">
+<div class="absolute w-screen z-30">
         <div class="relative flex min-w-screen justify-start md:justify-center md:items-end  bg-background  border-t-2 border-accent/10 select-none my-auto">
 
         <div class="flex w-full py-6">

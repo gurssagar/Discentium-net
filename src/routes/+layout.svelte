@@ -7,7 +7,7 @@
 
 </script>
 
-<div class="">
+<div>
     <header class=" fixed z-[100] flex lg:display justify-between px-8 w-[100%] h-20 bg-background/80 backdrop-blur-xl items-center text-gray-600 ">
         <nav class="flex lg:hidden visible select-none ">
             <Logo/>
@@ -109,10 +109,8 @@
 
         </nav>
     </header>
-    <div class="h-screen">
+    <div>
         <slot />
     </div>
-    <div class="inline-block align-bottom">
-    <Footer/>
-    </div>
 </div>
+

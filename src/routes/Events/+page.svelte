@@ -1,6 +1,5 @@
 <!-- App.svelte -->
 <script>
-    import Footer from "../Footer.svelte";
     import Headevent from "./Headevent.svelte";
     import {onMount} from "svelte";
 
@@ -65,4 +64,4 @@
             {/each}
     </div>
 </div>
-<Footer/>
+

@@ -4,11 +4,11 @@
 
 </script>
 
-<div class="pl-40 font-instrument">
-    <div class="px-40 pt-40 grid lg:grid-cols-2 grid-col-1 gap-6 lg:pt-[80px] lg:pb-[180px]">
+<div class="pl-40 font-instrument h-screen pb-100">
+    <div class="px-40 pt-60 grid lg:grid-cols-2 grid-col-1 gap-6 lg:pt-[80px] lg:pb-[180px]">
         {#each data?.records as record}
 
-            <article class="lg:flex bg-cyan-100 transition hover:shadow-xl dark:bg-gray-900 ">
+            <article class="lg:flex bg-primary/20 transition hover:shadow-xl dark:bg-gray-900 ">
                                 <div class="lg:block lg:basis-56">
                     <img
                             alt="Guitar"
@@ -33,7 +33,7 @@
                     <div class="lg:flex lg:items-end lg:justify-end">
                         <a
                                 href={`${record.Link}`}
-                                class="block bg-cyan-900 px-5 py-3 text-center lg:text-xs text-xs uppercase text-white transition hover:bg-cyan-700"
+                                class="inline-block align-bottom bg-primary/50 px-5 py-3 text-center lg:text-xs text-xs uppercase text-white transition hover:bg-primary/40 w-full"
                         >
                             Read Now
                         </a>

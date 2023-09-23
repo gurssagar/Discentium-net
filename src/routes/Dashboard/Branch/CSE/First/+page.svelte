@@ -5,7 +5,7 @@
 
 </script>
 
-<div class=" lg:pl-72 lg:px-0 px-6 pt-28 font-instrument overflow-hidden pb-16">
+<div class=" lg:pl-72 lg:px-0 px-6 pt-28 font-instrument overflow-hidden pb-16 h-screen">
     <div class="lg:px-10 px-4 flex justify-center items-center flex-wrap gap-6 lg:pt-[80px] lg:pb-[180px] ">
 
 
