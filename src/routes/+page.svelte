@@ -24,6 +24,35 @@
         // }
 	});
 
+    let x = 0;
+    let y = 0;
+
+    function handleMouseMove(e) {
+        x = e.clientX;
+        y = e.clientY;
+        const rect = e.currentTarget.getBoundingClientRect();
+        document.getElementsByClassName(".spot-blur")[0].animate(
+                [
+                    {
+                        top: x,
+                        left: y
+                    }
+                    ,
+                    { top: (y-200).toString() + "px",
+                      left: (x-300).toString() + "px",
+                    }
+                ], {
+                    duration: 10000,
+                    iterations: 1,
+                    delay: 400,
+                    easing: "cubic-bezier(0.49, 0.47, 0.63, 0.85)",
+                } 
+            )
+        // x = e.clientX - rect.x;
+        // y = e.clientY - rect.y;
+        // console.log(`x: ${e.clientX - rect.x}, y: ${e.clientY - rect.y}`)
+    };
+
     // const updateAnimationsLoaded = () => {document.cookie = `animationsLoaded=true; path="/"`};
 
     function animateMain() {
@@ -62,23 +91,13 @@
 		animateMain();
 	});
     
+    
 
 </script>
 
-<div class="lg:bg-white">
-
-                    <div class="w-[100%] h-[100%]">
-                        <div class="absolute xl:left-[calc(50%-700px)] xl:top-[-300px] xl:w-[1400px] xl:translate-x-0 w-screen left-[calc(50%)] translate-x-[-50%] top-[0px] h-auto overflow-hidden xl:block hidden animate-rotateInfinite">
-                            <lottie-player src={landingPageLottieFile} background="transparent" speed="1" direction="1" mode="normal" loop autoplay></lottie-player>
-                        </div>
-                    </div>
-        <div class="w-[100%] h-[100%] ">
-            <div class="lottie absolute xl:left-[calc(50%-700px)] xl:top-[-300px] xl:w-[1400px] xl:translate-x-0 w-screen left-[calc(50%)] translate-x-[-50%] top-[0px] h-auto overflow-hidden xl:hidden block animate-rotateInfinite">
-                <lottie-player src={mobilefile} background="transparent" speed="1" direction="1" mode="normal" loop autoplay></lottie-player>
-
-            </div>
-        </div>
-    <nav class="main-container h-[100%] flex justify-center text-center lg:px-16 px-4 dark:bg-gray-950 overflow-hidden lg:overflow-hidden pb-12 ">
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div class="lg:bg-background">
+    <nav class="main-container h-[100%] flex justify-center text-center lg:px-16 px-4 dark:bg-gray-950 overflow-hidden lg:overflow-hidden pb-12 z-[99999]">
         <div class="xl:pt-[350px] pt-[150px] xl:pb-[200px] pb-[100px] flex justify-center items-center xl:gap-40 md:gap-28 select-none xl:flex-row flex-col">
             <div class="flex justify-center items-center flex-col lg:px-0 px-2 gap-2">
                 <!-- {console.log(data?.animationsLoaded)} -->
@@ -96,6 +115,9 @@
                 {/if}
                 
                 <h2 class="dila-denge bg-gradient-to-r from-gradient1 to-gradient2  text-transparent bg-clip-text text-[44px] lg:text-7xl text-4xl select-none block font-instrument overflow-visible h-[80px] font-bold">{lowerText}</h2>
+                <!-- <button class="know-more mt-4 py-2 px-4 text-xl font-instrument text-text border-2 border-gradient2 hover:bg-gradient2 rounded-xl cursor-pointer">
+                    Know More
+                </button> -->
                 <!-- <p class="font-instrument lg:text-2xl text-md lg:max-w-[650px] max-w-[350px]">Lorem ipsum lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem.</p> -->
             </div>
 
@@ -161,7 +183,20 @@
             <!-- </Saos> -->
         </div>
     </nav>
+    <div class="w-[100%] h-[100%]">
+        <div class="lottie absolute xl:left-[calc(50%-700px)] xl:top-[-300px] xl:w-[1400px] xl:translate-x-0 w-screen left-[calc(50%)] translate-x-[-50%] top-[0px] h-auto overflow-hidden xl:block hidden animate-rotateInfinite">
+            <lottie-player src={landingPageLottieFile} background="transparent" speed="0.5" direction="1" mode="normal" loop autoplay></lottie-player>
+        </div>
+        
+    </div>
+    <div class="w-[100%] h-[50%] overflow-hidden">
+        <div class="lottie absolute xl:left-[calc(50%-700px)] xl:top-[-300px] xl:w-[1400px] xl:translate-x-0 w-screen left-[50%] translate-x-[-50%] top-[0px] h-[50%] object-cover overflow-hidden xl:hidden block">
+            <lottie-player src={mobilefile} background="transparent" speed="0.4" direction="1" mode="normal" loop autoplay></lottie-player>
 
+        </div>
+    </div>
 
+    <!-- <div style={`left: ${x}px; top: ${y}px`}  class={`spot-blur absolute w-28 h-28 blur-[50px] rounded-full bg-gradient-to-t from-gradient1 to-gradient2`}>
+    </div> -->
 
 </div>

@@ -8,7 +8,7 @@
 </script>
 
 <div class="">
-    <header class=" fixed z-[100] flex lg:display justify-between px-8 w-[100%] h-20 bg-background/50 backdrop-blur-xl items-center text-gray-600 ">
+    <header class=" fixed z-[100] flex lg:display justify-between px-8 w-[100%] h-20 bg-background/80 backdrop-blur-xl items-center text-gray-600 ">
         <nav class="flex lg:hidden visible select-none ">
             <Logo/>
         </nav>
@@ -109,8 +109,10 @@
 
         </nav>
     </header>
-    <div>
+    <div class="h-screen">
         <slot />
     </div>
+    <div class="inline-block align-bottom">
     <Footer/>
+    </div>
 </div>

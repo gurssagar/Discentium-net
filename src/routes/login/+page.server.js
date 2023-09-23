@@ -13,8 +13,7 @@ export const actions = {
                 };
             }
         } catch (err) {
-            console.log('Error: ', err);
-            throw error(500, 'Something went wrong logging in');
+            throw redirect(303, 'register');
         }
 
         throw redirect(303, 'Dashboard');
