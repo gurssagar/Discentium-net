@@ -37,10 +37,9 @@
                     <img class="btn-auth-img h-10" src='https://cdn-icons-png.flaticon.com/512/2504/2504739.png' alt='google sign in'/>
                     <p class="py-2 px-2">Sign Up With Google</p>
                 </button>
-
             </div>
-
         </form>
+    </div>
         <p class="text-center pt-10">Or</p>
 
         <form action="?/register" method="POST" class="flex flex-col items-center space-y-2 w-full pt-8">
