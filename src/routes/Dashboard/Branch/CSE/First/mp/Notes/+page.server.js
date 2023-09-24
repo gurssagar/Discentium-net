@@ -5,7 +5,7 @@ export async function load({}){
     const pb = new PocketBase("https://dist.techwe.me/");
 
     const records = await pb.collection('Notes').getList(1, 20,{
-        filter: 'created >= "2022-01-01 00:00:00" && Sem="1" && Subject="mp"',
+        filter: 'created >= "2022-01-01 00:00:00" && Subject="mp"',
     });
 
 
