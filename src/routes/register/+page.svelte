@@ -1,26 +1,48 @@
 <script>
     let LottiePlayer;
     import { onMount } from 'svelte';
-	let controlsLayout = [];
+    let controlsLayout = [];
     const landingPageLottieFile = "threejs register.json";
     onMount(async () => {
-		const module = await import('@lottiefiles/svelte-lottie-player');
-		LottiePlayer = module.LottiePlayer;
-	});
+        const module = await import('@lottiefiles/svelte-lottie-player');
+        LottiePlayer = module.LottiePlayer;
+    });
+    export let form;
+
+    let showPassword = false;
+    let showConfirm = false;
+
+    let password;
+    let confirm;
+    $:passError = (password?.length && confirm?.length)? (password !== confirm)? true: false : false;
+
+
+
 </script>
 
 <div class="flex justify-center items-center w-screen pt-40 pb-48 gap-40 p-8 xl:flex-row-reverse flex-col-reverse select-none">
     <div>
-                    <div class="lg:w-[550px] w-[450px] h-auto lg:px-0 px-2 scale-x-[-1]">
-                        <lottie-player src={landingPageLottieFile} background="transparent" speed="1" direction="1" mode="normal" loop autoplay></lottie-player>
+        <div class="lg:w-[550px] w-[450px] h-auto lg:px-0 px-2 scale-x-[-1]">
+            <lottie-player src={landingPageLottieFile} background="transparent" speed="1" direction="1" mode="normal" loop autoplay></lottie-player>
 
-                    </div>
+        </div>
     </div>
     <div class="flex flex-col items-center font-instrument bg-[#fcfaff] w-fit lg:px-20 py-12 p-8 rounded-3xl text-text shadow-2xl shadow-gradient2/10">
-        <h2 class="mt-2 text-center text-3xl ">
-        Register for an account
+        <h2 class="mt-2 text-center text-3xl pb-5">
+            Register for an account
         </h2>
-        
+        <form class="auth-form" method="post" action="?/OAuth2">
+            <div class="flex bg-gray-100 p-2 rounded-2xl shadow-2xl border-4">
+                <button class="btn-auth flex"  type="submit">
+                    <img class="btn-auth-img h-10" src='https://cdn-icons-png.flaticon.com/512/2504/2504739.png' alt='google sign in'/>
+                    <p class="py-2 px-2">Sign Up With Google</p>
+                </button>
+
+            </div>
+
+        </form>
+        <p class="text-center pt-10">Or</p>
+
         <form action="?/register" method="POST" class="flex flex-col items-center space-y-2 w-full pt-8">
             <div class="form-control w-full max-w-md">
                 <label for="name" class="label font-medium pb-1">
@@ -56,5 +78,5 @@
             </p>
         </form>
     </div>
-    
+
 </div>
