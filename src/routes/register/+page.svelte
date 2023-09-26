@@ -39,7 +39,7 @@
                 </button>
             </div>
         </form>
-    </div>
+
         <p class="text-center pt-10">Or</p>
 
         <form action="?/register" method="POST" class="flex flex-col items-center space-y-2 w-full pt-8">

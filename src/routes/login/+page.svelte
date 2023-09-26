@@ -28,6 +28,16 @@
         >register</a
         > if you don't already have an account.
         </p>
+            <form class="auth-form pt-10" method="post" action="?/OAuth2">
+                <div class="flex bg-gray-100 p-2 rounded-2xl shadow-2xl border-4">
+                    <button class="btn-auth flex"  type="submit">
+                        <img class="btn-auth-img h-10" src='https://cdn-icons-png.flaticon.com/512/2504/2504739.png' alt='google sign in'/>
+                        <p class="py-2 px-2">Sign Up With Google</p>
+                    </button>
+                </div>
+            </form>
+
+            <p class="text-center pt-10">Or</p>
         <form action="?/login" method="POST" class="flex flex-col items-center space-y-2 pt-8 w-full">
             <div class="form-control w-full max-w-md">
                 <label for="email" class="label font-medium pb-1">
