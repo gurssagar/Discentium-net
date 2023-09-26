@@ -55,9 +55,7 @@ export const nodes = [
 	() => import('./nodes/51'),
 	() => import('./nodes/52'),
 	() => import('./nodes/53'),
-	() => import('./nodes/54'),
-	() => import('./nodes/55'),
-	() => import('./nodes/56')
+	() => import('./nodes/54')
 ];
 
 export const server_loads = [0];
@@ -108,15 +106,13 @@ export const dictionary = {
 		"/Dashboard/Branch/IT/First/Books": [~45,[2]],
 		"/Events": [~46],
 		"/Events/[Event]": [~47],
-		"/Gallery": [48],
-		"/Members": [~49],
-		"/about": [50],
-		"/contact": [~51],
-		"/error": [52],
-		"/login": [~53],
-		"/register": [~54],
-		"/reset": [~55],
-		"/submitted": [56]
+		"/Members": [~48],
+		"/contact": [~49],
+		"/error": [50],
+		"/login": [~51],
+		"/register": [~52],
+		"/reset": [~53],
+		"/submitted": [54]
 	};
 
 export const hooks = {

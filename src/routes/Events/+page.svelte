@@ -8,7 +8,7 @@
     let TN=[];
 
     onMount(() => {
-        TN = data?.records.filter(record => record.Team === "TS");
+        TN = data?.records
     });
 </script>
 
@@ -16,7 +16,10 @@
 <Headevent/>
 <div class="font-instrument overflow-hidden">
     <div class=" py-20 px-4 lg:px-20 just font-instrument select-none flex justify-center items-center flex-wrap gap-8">
-        {#each data?.records as record}
+        {#if TN=[]}
+        <h1 class="text-2xl  text-text text-center">No Events are Scheduled Right Now.<br>We will Inform you soon for the future events</h1>
+        {/if}
+        {#each TN as record}
 
             <article class="lg:flex bg-secondary/40 transition max-w-[800px] dark:bg-gray-900 hover:shadow-lg">
                 <div class="lg:block hidden rotate-180 p-2 [writing-mode:_vertical-lr]">

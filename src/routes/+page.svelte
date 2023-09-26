@@ -23,6 +23,11 @@
         //     document.cookie = `animationsLoaded=true; path="/"`;
         // }
 	});
+    let TN=[];
+
+    onMount(() => {
+        TN = data?.records
+    });
 
     let x = 0;
     let y = 0;
@@ -131,6 +136,9 @@
                 <div class="p-10 justify-center items-center text-text m-0 flex">
                     <p class="font-instrument lg:text-xl text-md text-  center select-none max-w-[750px]">🚀 Prepare to embark on an electrifying journey destined to elevate your engineering prowess to new heights at the Creative Conclave 2023!</p>
                 </div>
+            {#if TN=[]}
+                <h1 class="text-2xl text-bold text-text text-center">No Events are Scheduled Right Now.<br>We will Inform you soon for the future events</h1>
+            {/if}
             <!-- </Saos> -->
             <!-- <Saos animation="-global-from-right 1.2s cubic-bezier(.62,.04,.51,.98) 0.5s both" once={true}> -->
                 <div class=" py-20 px-4 lg:px-20 just font-instrument select-none flex justify-center items-center flex-wrap gap-8">
