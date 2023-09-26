@@ -13,7 +13,7 @@ export async function load( { cookies } )
 
     const animationsLoaded = await cookies.get('animationsLoaded');
     console.log(animationsLoaded);
-    const pb = new PocketBase("https://techwe.me/");
+    const pb = new PocketBase("https://dist.techwe.me/");
 
     const records = await pb.collection('Events').getList(1, 3,{
         sort: '-created',
