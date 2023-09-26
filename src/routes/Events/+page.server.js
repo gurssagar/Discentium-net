@@ -1,7 +1,7 @@
 import PocketBase from 'pocketbase';
 
 export async function load({}){
-    const pb = new PocketBase("https://techwe.me/");
+    const pb = new PocketBase("https://dist.techwe.me/");
 
     const records = await pb.collection('Events').getList(1, 15, {
         sort: '-created',

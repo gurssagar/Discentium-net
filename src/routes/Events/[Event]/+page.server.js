@@ -2,7 +2,7 @@ import PocketBase from 'pocketbase';
 
 // eslint-disable-next-line no-empty-pattern
 export async function load({}){
-    const pb = new PocketBase("https://techwe.me/");
+    const pb = new PocketBase("https://dist.techwe.me/");
 
     const records = await pb.collection('Events').getList(1, 50,{
         sort: '-created',
