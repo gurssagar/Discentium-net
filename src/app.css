@@ -49,10 +49,14 @@
   font-family: "Gilgan";
   src: url("../static/Gilgan.otf");
 }
+@font-face {
+    font-family: "";
+    src: url("../static/supersonic-rocketship.ttf");
+}
 
 @font-face {
   font-family: "Elemental End";
-  src: url("../static/Elemental\ End.ttf");
+  src: url("../static/ElementalEnd.ttf");
 }
 
 @font-face {
