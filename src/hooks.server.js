@@ -4,7 +4,7 @@ import { serializeNonPOJOs } from '$lib/utils';
 export const handle = async ({ event, resolve }) => {
     event.locals.pb = new PocketBase('https://dist.techwe.me');
     event.locals.pb.authStore.loadFromCookie(event.request.headers.get('cookie') || '');
-
+    const new="hello";
     if (event.locals.pb.authStore.isValid) {
         event.locals.user = serializeNonPOJOs(event.locals.pb.authStore.model);
     } else {
